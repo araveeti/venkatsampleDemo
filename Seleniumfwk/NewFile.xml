@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite" parallel="none">
+
+ <test name="MultiBrowser_Firefox">
+
+ <parameter name="browser" value="firefox" />
+
+ <classes>
+
+ <class name="com.scotiabank.fwk.tests.RbcCurrencyConverterTestDemo" />
+
+ </classes>
+
+ </test>
+
+ <test name="MultiBrowser-Chrome">
+
+ <parameter name="browser" value="chrome" />
+
+ <classes>
+
+ <class name="com.scotiabank.fwk.tests.RbcCurrencyConverterTestDemo" />
+
+ </classes>
+
+ </test>
+
+</suite>

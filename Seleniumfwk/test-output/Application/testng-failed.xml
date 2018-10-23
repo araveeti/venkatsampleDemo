@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Application]">
+  <parameter name="config-file" value="Environment.conf"/>
+  <test name="RBC Online Currency Conversion(failed)">
+    <classes>
+      <class name="com.scotiabank.fwk.tests.RbcCurrencyConverterTestDemo">
+        <parameter name="browser" value="chrome"/>
+        <methods>
+          <include name="testRbcCurrencyConversions"/>
+          <include name="tearDown"/>
+          <include name="readTestData"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.scotiabank.fwk.tests.RbcCurrencyConverterTestDemo -->
+    </classes>
+  </test> <!-- RBC Online Currency Conversion(failed) -->
+</suite> <!-- Failed suite [Application] -->
