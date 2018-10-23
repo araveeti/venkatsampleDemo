@@ -89,8 +89,7 @@ public class RbcCurrencyConverterPage
 	}
 
 	/**
-	 * Sets the value of the baseCurrency input box. Once text is entered into
-	 * the box, the narrowed down result is clicked on.
+	 * select the proper dropdown values
 	 * 
 	 * @param currency
 	 */
@@ -146,6 +145,8 @@ public class RbcCurrencyConverterPage
 		System.out.println("original"+amountFrom);
 		float charge = Float.parseFloat(getOriginalValue());
 		float amount = Float.parseFloat(amountFrom);
+		
+		//Regex to get the flort value from String
 		
 				String text = getValueAfterConversion().replaceAll("[^\\d.]+|\\.(?!\\d)", "");
 				float textValue = Float.parseFloat(text);

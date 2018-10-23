@@ -42,12 +42,12 @@ import com.scotiabank.fwk.pageobjects.RbcCurrencyConverterPage;
  */
 public class RbcCurrencyConverterTestDemo {
 	private static final String PROPERTIES_FILE = "resources/Environment.properties";
-	private static final String XLS_FILE = "resources/oanda.xls";
+	private static final String XLS_FILE = "resources/TestDataFile.xls";
 	private static WebDriver driver;
 	private static String baseUrl;
-	private static com.scotiabank.fwk.pageobjects.RbcCurrencyConverterPage currencyConverterPage;
+	private static com.scotiabank.fwk.pageobjects.RbcCurrencyConverterPage rbcCurrencyPageObject;
 
-	private static Vector<RbcCurrencyTestDataPojo> currencyConversionTestVector;
+	private static Vector<RbcCurrencyTestDataPojo> crbcurrencyPojo;
 	
 
 	// Define ExcelSheet Columns
@@ -58,8 +58,8 @@ public class RbcCurrencyConverterTestDemo {
 	@Parameters({"browser"})
 	@BeforeClass
 	public static void setUp(String aBrowser) throws Exception {
-		Properties props = new Properties();
-		props.load(new FileInputStream(PROPERTIES_FILE));
+		Properties aProperties = new Properties();
+		aProperties.load(new FileInputStream(PROPERTIES_FILE));
 		System.out.println(findOS());
 		
 		if(findOS().toLowerCase().contains("mac")) {
@@ -92,9 +92,9 @@ public class RbcCurrencyConverterTestDemo {
 			
 		}
 		
-		baseUrl = props.getProperty("url");
+		baseUrl = aProperties.getProperty("url");
 		driver.manage().timeouts().implicitlyWait(65, TimeUnit.SECONDS);
-		currencyConverterPage = PageFactory.initElements(driver,
+		rbcCurrencyPageObject = PageFactory.initElements(driver,
 				RbcCurrencyConverterPage.class);
 		driver.navigate().to(baseUrl + RbcCurrencyConverterPage.URL);
 		driver.manage().window().maximize();
@@ -116,8 +116,8 @@ public class RbcCurrencyConverterTestDemo {
 	 */
 	@BeforeClass
 	public static void readTestData() throws Exception {
-		currencyConversionTestVector = new Vector<RbcCurrencyTestDataPojo>();
-		// Read Excel Test Data
+		crbcurrencyPojo = new Vector<RbcCurrencyTestDataPojo>();
+		// Read  the Test data from the TestDataFile.xls
 		List<List<HSSFCell>> testData = ExcelUtils.readDataFromFile(XLS_FILE);
 		HSSFCell cell;
 		for (int row = 1; row < testData.size(); row++) {
@@ -144,13 +144,13 @@ public class RbcCurrencyConverterTestDemo {
 			
 			RbcCurrencyTestDataPojo currencyTestData = new RbcCurrencyTestDataPojo(
 					inputCurrency, wantedCurrency, inputAmountString);
-			currencyConversionTestVector.addElement(currencyTestData);
+			crbcurrencyPojo.addElement(currencyTestData);
 		}
  }
 
 	@AfterClass
 	public static void tearDown() throws Exception {
-		System.out.println("tearDown");
+		System.out.println("tearDown the initialisation");
 		driver.quit();
 	}
 
@@ -158,12 +158,11 @@ public class RbcCurrencyConverterTestDemo {
 	public void testRbcCurrencyConversions() throws InterruptedException,
 			IOException {
 
-		for (RbcCurrencyTestDataPojo t : currencyConversionTestVector) {
-			currencyConverterPage.setCurrencyIHave(t.getInputCurrency());
-			currencyConverterPage.setCurrencyIWant(t.getWantedCurrency());
-			currencyConverterPage.setInputAmount(t.getInputAmountString());	
-			Assert.assertTrue(currencyConverterPage.calculateAmount(t.getInputAmountString()));
-
+		for (RbcCurrencyTestDataPojo t : crbcurrencyPojo) {
+			rbcCurrencyPageObject.setCurrencyIHave(t.getFromCurrency());
+			rbcCurrencyPageObject.setCurrencyIWant(t.getCurrencyTo());
+			rbcCurrencyPageObject.setInputAmount(t.getInputAmountString());	
+			Assert.assertTrue(rbcCurrencyPageObject.calculateAmount(t.getInputAmountString()));
 		}
 	}
 	
@@ -176,26 +175,26 @@ public class RbcCurrencyConverterTestDemo {
  *
  */
 class RbcCurrencyTestDataPojo {
-	private String inputCurrency;
-	private String wantedCurrency;
+	private String fromCurrency;
+	private String toCurrency;
 	private String inputAmountString;
 
 	public RbcCurrencyTestDataPojo(String inputCurrency, String wantedCurrency,
 			String inputAmountWanted) {
-		this.inputCurrency = inputCurrency;
-		this.wantedCurrency = wantedCurrency;
+		this.fromCurrency = inputCurrency;
+		this.toCurrency = wantedCurrency;
 		this.inputAmountString = inputAmountWanted;
 	}
 
 	// Setters and Getters
-	public String getInputCurrency() {
-		return inputCurrency;
+	public String getFromCurrency() {
+		return fromCurrency;
 	}
 
 	
 
-	public String getWantedCurrency() {
-		return wantedCurrency;
+	public String getCurrencyTo() {
+		return toCurrency;
 	}
 
 	

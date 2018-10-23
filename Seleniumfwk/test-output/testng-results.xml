@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="62603" started-at="2018-10-23T19:04:55Z" finished-at="2018-10-23T19:05:57Z">
+  <suite name="Suite" duration-ms="43980" started-at="2018-10-23T20:03:18Z" finished-at="2018-10-23T20:04:02Z">
     <groups>
     </groups>
-    <test name="MultiBrowser_Firefox" duration-ms="37035" started-at="2018-10-23T19:04:55Z" finished-at="2018-10-23T19:05:32Z">
+    <test name="MultiBrowser_Firefox" duration-ms="27832" started-at="2018-10-23T20:03:18Z" finished-at="2018-10-23T20:03:45Z">
       <class name="com.scotiabank.fwk.tests.RbcCurrencyConverterTestDemo">
-        <test-method status="PASS" signature="readTestData()[pri:0, instance:com.scotiabank.fwk.tests.RbcCurrencyConverterTestDemo@3ffc5af1]" name="readTestData" is-config="true" duration-ms="486" started-at="2018-10-24T00:34:55Z" finished-at="2018-10-24T00:34:55Z">
+        <test-method status="PASS" signature="readTestData()[pri:0, instance:com.scotiabank.fwk.tests.RbcCurrencyConverterTestDemo@3ffc5af1]" name="readTestData" is-config="true" duration-ms="468" started-at="2018-10-24T01:33:18Z" finished-at="2018-10-24T01:33:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- readTestData -->
-        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:com.scotiabank.fwk.tests.RbcCurrencyConverterTestDemo@3ffc5af1]" name="setUp" is-config="true" duration-ms="26332" started-at="2018-10-24T00:34:55Z" finished-at="2018-10-24T00:35:22Z">
+        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:com.scotiabank.fwk.tests.RbcCurrencyConverterTestDemo@3ffc5af1]" name="setUp" is-config="true" duration-ms="17053" started-at="2018-10-24T01:33:18Z" finished-at="2018-10-24T01:33:35Z">
           <params>
             <param index="0">
               <value>
@@ -22,23 +22,23 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="testRbcCurrencyConversions()[pri:0, instance:com.scotiabank.fwk.tests.RbcCurrencyConverterTestDemo@3ffc5af1]" name="testRbcCurrencyConversions" duration-ms="9573" started-at="2018-10-24T00:35:22Z" finished-at="2018-10-24T00:35:31Z">
+        <test-method status="PASS" signature="testRbcCurrencyConversions()[pri:0, instance:com.scotiabank.fwk.tests.RbcCurrencyConverterTestDemo@3ffc5af1]" name="testRbcCurrencyConversions" duration-ms="9656" started-at="2018-10-24T01:33:35Z" finished-at="2018-10-24T01:33:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testRbcCurrencyConversions -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.scotiabank.fwk.tests.RbcCurrencyConverterTestDemo@3ffc5af1]" name="tearDown" is-config="true" duration-ms="622" started-at="2018-10-24T00:35:31Z" finished-at="2018-10-24T00:35:32Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.scotiabank.fwk.tests.RbcCurrencyConverterTestDemo@3ffc5af1]" name="tearDown" is-config="true" duration-ms="630" started-at="2018-10-24T01:33:45Z" finished-at="2018-10-24T01:33:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.scotiabank.fwk.tests.RbcCurrencyConverterTestDemo -->
     </test> <!-- MultiBrowser_Firefox -->
-    <test name="MultiBrowser-Chrome" duration-ms="25525" started-at="2018-10-23T19:05:32Z" finished-at="2018-10-23T19:05:57Z">
+    <test name="MultiBrowser-Chrome" duration-ms="16123" started-at="2018-10-23T20:03:46Z" finished-at="2018-10-23T20:04:02Z">
       <class name="com.scotiabank.fwk.tests.RbcCurrencyConverterTestDemo">
-        <test-method status="PASS" signature="readTestData()[pri:0, instance:com.scotiabank.fwk.tests.RbcCurrencyConverterTestDemo@343f4d3d]" name="readTestData" is-config="true" duration-ms="5" started-at="2018-10-24T00:35:32Z" finished-at="2018-10-24T00:35:32Z">
+        <test-method status="PASS" signature="readTestData()[pri:0, instance:com.scotiabank.fwk.tests.RbcCurrencyConverterTestDemo@343f4d3d]" name="readTestData" is-config="true" duration-ms="9" started-at="2018-10-24T01:33:46Z" finished-at="2018-10-24T01:33:46Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- readTestData -->
-        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:com.scotiabank.fwk.tests.RbcCurrencyConverterTestDemo@343f4d3d]" name="setUp" is-config="true" duration-ms="15777" started-at="2018-10-24T00:35:32Z" finished-at="2018-10-24T00:35:48Z">
+        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:com.scotiabank.fwk.tests.RbcCurrencyConverterTestDemo@343f4d3d]" name="setUp" is-config="true" duration-ms="6242" started-at="2018-10-24T01:33:46Z" finished-at="2018-10-24T01:33:52Z">
           <params>
             <param index="0">
               <value>
@@ -49,11 +49,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="testRbcCurrencyConversions()[pri:0, instance:com.scotiabank.fwk.tests.RbcCurrencyConverterTestDemo@343f4d3d]" name="testRbcCurrencyConversions" duration-ms="9643" started-at="2018-10-24T00:35:48Z" finished-at="2018-10-24T00:35:57Z">
+        <test-method status="PASS" signature="testRbcCurrencyConversions()[pri:0, instance:com.scotiabank.fwk.tests.RbcCurrencyConverterTestDemo@343f4d3d]" name="testRbcCurrencyConversions" duration-ms="9707" started-at="2018-10-24T01:33:52Z" finished-at="2018-10-24T01:34:01Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testRbcCurrencyConversions -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.scotiabank.fwk.tests.RbcCurrencyConverterTestDemo@343f4d3d]" name="tearDown" is-config="true" duration-ms="98" started-at="2018-10-24T00:35:57Z" finished-at="2018-10-24T00:35:57Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.scotiabank.fwk.tests.RbcCurrencyConverterTestDemo@343f4d3d]" name="tearDown" is-config="true" duration-ms="163" started-at="2018-10-24T01:34:01Z" finished-at="2018-10-24T01:34:02Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
