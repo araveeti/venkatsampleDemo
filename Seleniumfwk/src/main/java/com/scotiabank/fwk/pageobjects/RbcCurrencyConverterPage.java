@@ -104,9 +104,9 @@ public class RbcCurrencyConverterPage
 	public void setInputAmount(String input) throws InterruptedException {
 		System.out.println("Input is::" +input);
 		((JavascriptExecutor)driver).executeScript("return document.getElementById('currency-have-amount').value="+input);
-		Thread.sleep(2000);
+		//Thread.sleep(2000);
 		((JavascriptExecutor)driver).executeScript("arguments[0].click();", btnChangeCurrency);
-		Thread.sleep(2000);
+		//Thread.sleep(2000);
 
 	}
 	
